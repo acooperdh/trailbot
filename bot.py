@@ -117,6 +117,17 @@ if __name__ == "__main__":
     load_commands("normal")
 
 
+
+@bot.event
+async def on_member_join(member: disnake.Member) -> None:
+    """
+    The code in this event is executed every time someone joins the server, and gives them access to a variety of free channels
+    that are hidden from subscribers
+    """
+    role = ""  # this should be the role of the new free channels
+    await member.send(config['welcome_message'])
+    await member.add_roles(role)
+
 @bot.event
 async def on_message(message: disnake.Message) -> None:
     """

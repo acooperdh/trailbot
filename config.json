@@ -6,5 +6,6 @@
   "owners": [
     123456789,
     987654321
-  ]
+  ],
+  "welcome_message": "Welcome to SimplePicks!"
 }
